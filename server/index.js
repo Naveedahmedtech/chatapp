@@ -20,11 +20,6 @@ app.use(express.json());
 let usersOnline = [];
 
 io.on("connection", (socket) => {
-  console.log("Connection established");
-  socket.on("join", (name) => {
-    usersOnline[socket.id] = name;
-    io.emit("userList", Object.values(usersOnline));
-  });
   socket.on("join", (name) => {
     usersOnline[socket.id] = name;
     io.emit("userList", Object.values(usersOnline));
