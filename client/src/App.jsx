@@ -35,7 +35,8 @@ function App() {
     setMessage("");
   };
 
-  // console.log(usersOnline);
+
+  console.log(usersOnline);
 
   return (
     <div
@@ -84,7 +85,7 @@ function App() {
         onChange={(e) => setMessage(e.target.value)}
         fullWidth
       />
-      <Button onClick={handleSendMessage}>Send</Button>
+      <Button onClick={handleSendMessage} variant="contained" sx={{mt: 2}} fullWidth>Send</Button>
     </div>
   );
 }
